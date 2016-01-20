@@ -1,0 +1,12 @@
+<header>
+  <div class="logo">
+    <heading></heading>
+  </div>
+</header>
+<div class="container" ng-controller="mainIndexController as maincntr">
+		<div ng-repeat="product in maincntr.products">
+	        <a ui-sref="{{product.href}}">
+	        	<div class="choose-buttons {{product.classFor}} {{product.classFor1}}">{{product.title}}</div>
+	        </a>
+        </div>
+</div>

@@ -1,0 +1,13 @@
+<div class="container" ng-controller="chestIndexController as chestcntr" >    
+    <a href="/egor-test2/#/start.html">
+      <nav></nav>
+      <startheader></startheader>
+      <div ng-repeat="product in chestcntr.products">
+        <a ui-sref="{{product.href}}">
+          <div class="select__start-programm {{product.bootstrap}}">
+              <h3 class="start_select_header">{{product.title}}</h3>
+              <img ng-src="{{product.img}}" alt="">
+          </div>
+        </a>
+      </div>
+</div>

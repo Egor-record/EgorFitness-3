@@ -1,0 +1,12 @@
+<div ng-controller="startIndexController as startcntr" class="container">
+	<a href='/egor-test2/#/'><nav></nav>
+	<startheader></startheader>
+	<div ng-repeat="product in startcntr.products">
+		<a ui-sref="{{product.href}}">
+		  <div class="select__start-programm">
+			<h3 class="start_select_header">{{product.title}}</h3>
+			<img ng-src="{{product.img}}" alt="Describtion">
+		  </div>
+	  </a>
+  	</div>
+</div>
