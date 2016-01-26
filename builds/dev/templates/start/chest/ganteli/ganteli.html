@@ -1,11 +1,27 @@
     <header class="header__back">
-     <a href="/egor-test2/#/start/chest.html" < Back
+     <a href="/egor-test2/#/start/chest.html"> < Back
     </header></a>
-    <main>
-      <h2 class="start_header">Ganteli</h2>
-      	<form ng-submit="profile.$save()">
-        <p><span>KG</span><input type="text" class="form-control" placeholder="kg" ng-model="profile.kg" type="text" /></p>
-        <p><span>Podhodi</span>
-        <button>Add</button>
+    <div class="container">
+      <h3 class="start_header">{{heading}}</h3>
 
+      <img class="img-circle" src="http://molotovfit.ru/wp-content/uploads/2015/11/4-F1520-20Kg-Chrome-DB.jpg" width="150" height="150" style="margin-bottom:30px;">
+    	<form class="form-inline" ng-submit="addMessage()">
+			<div class="form-group">
+			<label class="sr-only" for="exampleInputValue">Value</label>
+			<div class="input-group">
+					<div class="input-group-addon">KG</div>
+					<input type="text" class="form-control" id="exampleInputValue" placeholder="KG" ng-model="message2">
+			</div>
+			</div>
+			<div class="form-group">
+			<label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
+			<div class="input-group">
+					<div class="input-group-addon">#</div>
+					<input type="text" class="form-control" id="exampleInputAmount" placeholder="Tryes" ng-model="message1">
+					
+			</div>
+			</div>
+			<button type="submit" class="btn btn-success">Add training</button>
+	</form>
+	</div>
      
