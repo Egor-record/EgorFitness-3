@@ -1,13 +1,22 @@
   var app = angular.module('EgorFintess');
 
-	app.controller('CreateCtrl', ["$scope", "$firebaseObject",
-  		function($scope, $firebaseObject) {
+	app.controller('CreateCtrl', ["$scope", "ganteliAdd", function($scope, ganteliAdd) {
+  	
+
+			$scope.heading = "Lite Weights";
+    		$scope.messages = ganteliAdd;
 
 
+    		$scope.addMessage = function() {
+      // $add on a synchronized array is like Array.push() except it saves to the database!
+		      $scope.messages.$add({
+		        kg: $scope.message2,
+		        raz: $scope.message1
+		      });
 
-   		var ref = new Firebase("https://sweltering-fire-2598.firebaseio.com");
-    // download physicsmarie's profile data into a local object
-    // all server changes are applied in realtime
-    	$scope.profile = $firebaseObject(ref.child('users').child('uid').child('chest'));
-  }
-]);
+		      $scope.message = "";
+		    };
+
+}
+  		
+	]);
