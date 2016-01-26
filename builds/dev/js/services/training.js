@@ -1,25 +1,10 @@
 angular.module('EgorFintess')
 
-.service( 'Tranings', function ($firebaseArray, $firebaseObject, FirebaseUrl, users) { // прописываю зависимости
-	var traningsRef = new Firebase(FirebaseUrl+'/users'); // прописываю адрес + юзерсы
-	var tranings = $firebaseArray(traningsRef); // создаю массив 
 
-	var Tranings = {
-		  getProfile: function(uid){
-		    return $firebaseObject(usersRef.child(uid));
-
-		  },
-		  getDisplayName: function(uid){
-		    return users.$getRecord(uid).displayName;
-		  },
-
-		  getDisplayTranings: function(uid){
-		    return tranings.$getRecord(uid).displayTranings;
-		  }
-		  
-
-	};
-
-    return Tranings;
-
-  });
+.factory("ganteliAdd", ["$firebaseArray",
+	function($firebaseArray) {
+	    // create a reference to the database where we will store our data
+	    var ref = new Firebase("https://sweltering-fire-2598.firebaseio.com/users/trainers");
+	    return $firebaseArray(ref);
+	}
+]);
