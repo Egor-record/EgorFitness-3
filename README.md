@@ -6,3 +6,5 @@ FitnessTracker
 В файле /builds/dev/templates/start/chest/ganteli/ganteli.html - записывается тренировка
 
 В файле /mystat.html - выводится. 
+
+Живой проект можно посмотреть на http://siaskov.me/egor-test2/#/
